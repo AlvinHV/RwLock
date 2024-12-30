@@ -19,7 +19,7 @@ public final class RwLock<T> : @unchecked Sendable {
     private let lock = NSLock()
     private var resource: T
     
-    init(resource: T) {
+    public init(_ resource: T) {
         self.resource = resource
     }
     
@@ -38,7 +38,7 @@ public final class RwLock<T> : @unchecked Sendable {
 ```swift
 import RwLock
 
-let rwLock = RwLock(resource: 42)
+let rwLock = RwLock(42)
 
 // Access and modify the resource safely
 rwLock.access { resource in
@@ -54,7 +54,7 @@ Another example
 ```swift
 import RwLock
 
-let rwLock = RwLock(resource: -1)
+let rwLock = RwLock(-1)
 
 // Access and modify
 rwLock.access { resource in
