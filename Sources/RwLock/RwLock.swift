@@ -6,7 +6,7 @@ public final class RwLock<T> : @unchecked Sendable {
     private let lock = NSLock()
     private var resource: T
     
-    init(resource: T) {
+    public init(_ resource: T) {
         self.resource = resource
     }
     
