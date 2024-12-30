@@ -31,7 +31,7 @@ public final class RwLock<T> : @unchecked Sendable {
     }
 }
 ```
-- **`access(modify:)`**: A method that locks the resource for modification, performs the modification, and then unlocks it. DO NOT USE RESOURCE OUTSIDE OF ACCESS.
+- **`access(modify:)`**: A method that locks the resource for modification, performs the modification, and then unlocks it. DO NOT STORE AND USE RESOURCE OUTSIDE OF ACCESS'S SCOPE'.
 
 ### Example Usage
 
